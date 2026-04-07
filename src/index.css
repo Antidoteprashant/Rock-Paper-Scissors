@@ -1,0 +1,55 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg: #f1f3f4;
+  --surface: #ffffff;
+  --surface2: #f8f9fa;
+  --border: #dadce0;
+  --accent: #5f6368;
+  --accent-light: #80868b;
+  --accent-glow: rgba(95, 99, 104, 0.15);
+  --win: #1e8e3e;
+  --win-glow: rgba(30, 142, 62, 0.2);
+  --lose: #d93025;
+  --lose-glow: rgba(217, 48, 37, 0.2);
+  --tie: #e37400;
+  --tie-glow: rgba(227, 116, 0, 0.2);
+  --text: #202124;
+  --text-muted: #5f6368;
+  --hot: #fa7b17;
+  --hot-glow: rgba(250, 123, 23, 0.3);
+  --radius: 8px;
+  --radius-lg: 16px;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Roboto', system-ui, -apple-system, sans-serif;
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  font-family: inherit;
+}
+
+button:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  user-select: none;
+}

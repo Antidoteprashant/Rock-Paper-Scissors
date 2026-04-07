@@ -1,0 +1,118 @@
+.streak-display {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 1.25rem 1.5rem;
+  flex: 1;
+  min-width: 180px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.07);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.streak-display.streak-hot {
+  border-color: var(--hot);
+  box-shadow: 0 0 16px var(--hot-glow);
+  animation: hotPulse 2s ease-in-out infinite;
+}
+
+@keyframes hotPulse {
+  0%, 100% { box-shadow: 0 0 12px var(--hot-glow); }
+  50%       { box-shadow: 0 0 28px var(--hot-glow); }
+}
+
+.streak-title {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--text-muted);
+  margin-bottom: 1rem;
+}
+
+.section-icon {
+  font-size: 1rem !important;
+}
+
+.streak-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+}
+
+.streak-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.2rem;
+  background: var(--surface2);
+  border-radius: var(--radius);
+  padding: 0.75rem 0.5rem;
+  border: 1px solid var(--border);
+  min-height: 90px;
+  justify-content: center;
+}
+
+.streak-label {
+  font-size: 0.68rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--text-muted);
+}
+
+.streak-current-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+}
+
+.streak-value {
+  font-size: 2rem;
+  font-weight: 800;
+  line-height: 1;
+  color: var(--accent);
+  transition: color 0.3s ease;
+}
+
+.streak-display.streak-hot .streak-value {
+  color: var(--hot);
+}
+
+.hot-icon {
+  font-size: 1.4rem !important;
+  color: var(--hot);
+  animation: flameBounce 0.6s ease-in-out infinite alternate;
+}
+
+@keyframes flameBounce {
+  from { transform: translateY(0) rotate(-5deg); }
+  to   { transform: translateY(-4px) rotate(5deg); }
+}
+
+.hot-label {
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: var(--hot);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  animation: fadeInUp 0.3s ease;
+}
+
+.streak-best-value {
+  color: var(--tie);
+}
+
+.streak-best-label {
+  font-size: 0.62rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(4px); }
+  to   { opacity: 1; transform: translateY(0); }
+}

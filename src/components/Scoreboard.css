@@ -1,0 +1,78 @@
+.scoreboard {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 1.25rem 1.5rem;
+  flex: 1;
+  min-width: 260px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.07);
+}
+
+.scoreboard-title {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--text-muted);
+  margin-bottom: 1rem;
+}
+
+.section-icon {
+  font-size: 1rem !important;
+}
+
+.score-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 0.75rem;
+}
+
+.score-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+  background: var(--surface2);
+  border-radius: var(--radius);
+  padding: 0.75rem 0.5rem;
+  border: 1px solid var(--border);
+}
+
+.score-label {
+  font-size: 0.68rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--text-muted);
+}
+
+.score-value {
+  font-size: 2rem;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.score-player .score-value { color: var(--win); }
+.score-tie .score-value    { color: var(--tie); }
+.score-computer .score-value { color: var(--lose); }
+
+.round-counter {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  margin-top: 0.9rem;
+  justify-content: center;
+  font-size: 0.82rem;
+  color: var(--text-muted);
+}
+
+.round-icon {
+  font-size: 0.9rem !important;
+}
+
+.round-counter strong {
+  color: var(--text);
+}
