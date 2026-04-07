@@ -1,20 +1,9 @@
-import { useEffect, useRef } from 'react';
 import './RoundResult.css';
 
 const ICON = { rock: 'sports_mma', paper: 'pan_tool', scissors: 'content_cut' };
 const LABEL = { rock: 'Rock', paper: 'Paper', scissors: 'Scissors' };
 
 export default function RoundResult({ result }) {
-  const containerRef = useRef(null);
-
-  useEffect(() => {
-    if (result && containerRef.current) {
-      containerRef.current.classList.remove('result-animate');
-      void containerRef.current.offsetWidth;
-      containerRef.current.classList.add('result-animate');
-    }
-  }, [result]);
-
   if (!result) {
     return (
       <div className="result-placeholder">
@@ -29,7 +18,7 @@ export default function RoundResult({ result }) {
   const outcomeClass = winner === 'player' ? 'outcome-win' : winner === 'computer' ? 'outcome-lose' : 'outcome-tie';
 
   return (
-    <div className="result-container result-animate" ref={containerRef} aria-live="polite">
+    <div className="result-container" aria-live="polite">
       <div className="choices-row">
         <div className={`choice-card ${winner === 'player' ? 'choice-winner' : ''}`}>
           <span className="material-symbols-outlined choice-icon">{ICON[playerMove]}</span>

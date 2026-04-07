@@ -6,18 +6,11 @@
   flex: 1;
   min-width: 180px;
   box-shadow: 0 1px 3px rgba(0,0,0,0.07);
-  transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .streak-display.streak-hot {
   border-color: var(--hot);
   box-shadow: 0 0 16px var(--hot-glow);
-  animation: hotPulse 2s ease-in-out infinite;
-}
-
-@keyframes hotPulse {
-  0%, 100% { box-shadow: 0 0 12px var(--hot-glow); }
-  50%       { box-shadow: 0 0 28px var(--hot-glow); }
 }
 
 .streak-title {
@@ -74,7 +67,6 @@
   font-weight: 800;
   line-height: 1;
   color: var(--accent);
-  transition: color 0.3s ease;
 }
 
 .streak-display.streak-hot .streak-value {
@@ -84,12 +76,6 @@
 .hot-icon {
   font-size: 1.4rem !important;
   color: var(--hot);
-  animation: flameBounce 0.6s ease-in-out infinite alternate;
-}
-
-@keyframes flameBounce {
-  from { transform: translateY(0) rotate(-5deg); }
-  to   { transform: translateY(-4px) rotate(5deg); }
 }
 
 .hot-label {
@@ -98,7 +84,6 @@
   color: var(--hot);
   text-transform: uppercase;
   letter-spacing: 0.5px;
-  animation: fadeInUp 0.3s ease;
 }
 
 .streak-best-value {
@@ -112,7 +97,3 @@
   letter-spacing: 0.4px;
 }
 
-@keyframes fadeInUp {
-  from { opacity: 0; transform: translateY(4px); }
-  to   { opacity: 1; transform: translateY(0); }
-}

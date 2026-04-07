@@ -52,12 +52,6 @@
   border-radius: var(--radius);
   padding: 0.5rem 0.9rem;
   font-size: 0.88rem;
-  animation: slideIn 0.25s ease both;
-}
-
-@keyframes slideIn {
-  from { opacity: 0; transform: translateX(-8px); }
-  to   { opacity: 1; transform: translateX(0); }
 }
 
 .hist-round {
